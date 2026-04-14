@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0f0f23">
+
+    <!-- ═══ TOP CONTROL PANEL ═══ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#1a1a2e"
+        android:elevation="6dp"
+        android:padding="12dp">
+
+        <!-- Title Row + IP -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:text="MultiB"
+                android:textColor="#e94560"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text=" v1.0"
+                android:textColor="#555577"
+                android:textSize="11sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:paddingBottom="4dp"/>
+
+            <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/ip_text"
+                android:text="🌐 IP: Loading..."
+                android:textColor="#888888"
+                android:textSize="11sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#2a2a4e"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- URL Input -->
+        <EditText
+            android:id="@+id/url_input"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:hint="📋 YouTube URL paste කරන්න..."
+            android:textColor="#FFFFFF"
+            android:textColorHint="#555577"
+            android:background="@drawable/input_bg"
+            android:textSize="13sp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            android:inputType="textUri"/>
+
+        <!-- Browser Count + Refresh Interval Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:text="Browsers:"
+                android:textColor="#888888"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Spinner
+                android:id="@+id/browser_count_spinner"
+                android:layout_width="72dp"
+                android:layout_height="36dp"
+                android:backgroundTint="#e94560"
+                android:layout_marginStart="6dp"/>
+
+            <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+
+            <TextView
+                android:text="Auto-refresh (min):"
+                android:textColor="#888888"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/refresh_interval_input"
+                android:text="30"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/input_bg"
+                android:textSize="13sp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:layout_marginStart="6dp"
+                android:layout_width="58dp"
+                android:layout_height="36dp"
+                android:inputType="number"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btn_start"
+                android:text="▶ START"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/btn_start"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="42dp"/>
+
+            <Button
+                android:id="@+id/btn_refresh_all"
+                android:text="🔄 REFRESH"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/btn_refresh"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="42dp"
+                android:layout_marginStart="5dp"/>
+
+            <Button
+                android:id="@+id/btn_stop"
+                android:text="⏹ STOP"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/btn_stop"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="42dp"
+                android:layout_marginStart="5dp"/>
+        </LinearLayout>
+
+        <!-- Volume + Status Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:text="🔇"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <SeekBar
+                android:id="@+id/volume_seekbar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:progressTint="#e94560"
+                android:thumbTint="#e94560"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"/>
+
+            <TextView
+                android:text="🔊"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="0.3"/>
+
+            <TextView
+                android:id="@+id/status_text"
+                android:text="⏸ Ready"
+                android:textColor="#888888"
+                android:textSize="11sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ═══ BROWSER GRID ═══ -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#0f0f23"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:id="@+id/browser_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="4dp"/>
+
+    </ScrollView>
+
+</LinearLayout>
