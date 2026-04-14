@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- M letter for MultiB -->
+    <path
+        android:fillColor="#e94560"
+        android:pathData="M20,80 L20,28 L36,28 L54,58 L72,28 L88,28 L88,80 L76,80 L76,50 L58,80 L50,80 L32,50 L32,80 Z"/>
+    <!-- 4 browser dots -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.6"
+        android:pathData="M22,85 L38,85 L38,95 L22,95 Z M42,85 L58,85 L58,95 L42,95 Z M62,85 L78,85 L78,95 L62,95 Z M82,85 L98,85 L98,95 L82,95 Z"/>
+</vector>
